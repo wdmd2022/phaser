@@ -19,6 +19,7 @@ class SceneMain extends Phaser.Scene {
         enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
         backgroundmusic = this.sound.add('backgroundMusic');
         backgroundmusic.play();
+        var bubble;
         bubble = this.physics.add.sprite(200, 150, 'bubble');
         bubble.setCollideWorldBounds(true);
 
@@ -33,7 +34,6 @@ class SceneMain extends Phaser.Scene {
       }
       
     update() {
-        let gameover = false;
         if(gameover){
             return;
         }

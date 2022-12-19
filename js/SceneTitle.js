@@ -3,7 +3,7 @@ class SceneTitle extends Phaser.Scene {
         super('SceneTitle');
     }
     preload() {
-        this.preload.image("startButton", "assets/Images/start.png");
+        this.load.image("startButton", "assets/Images/start.png");
     }
     create() {
         console.log('SceneTitle');

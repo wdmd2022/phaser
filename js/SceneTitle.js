@@ -7,7 +7,7 @@ class SceneTitle extends Phaser.Scene {
     }
     create() {
         console.log('SceneTitle');
-        var startGameButton = this.add.image(1000, 1000, "startButton");
+        var startGameButton = this.add.image(400, 300, "startButton");
         startGameButton.setInteractive();
         startGameButton.on("pointerdown", this.startGame, this);
     }

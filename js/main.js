@@ -2,8 +2,8 @@ var game;
 
 var config = {
         type: Phaser.AUTO,
-        width: 2000,
-        height: 2000,
+        width: 800,
+        height: 600,
         parent: 'phaser-game',
         scene: [SceneTitle,SceneMain]
     };

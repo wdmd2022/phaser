@@ -3,13 +3,13 @@ class SceneMain extends Phaser.Scene {
         super('SceneMain');
     }
     preload() {
-        this.load.image('background', './assets/Images/background.png');
+        this.load.image('background', './assets/Images/background_1k_tall.png');
         this.load.audio('backgroundMusic', '/assets/Sound_Effects/Adventure-320bit.mp3')
       }
       
       
     create() {
-        this.add.image(400, 200, 'background');
+        this.add.image(500, 500, 'background');
         // backgroundMusic = game.sound.play('backgroundMusic');
         scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
         timerText = this.add.text(600, 16, 'timer: 0', { fontsize: '32px', fill: '#000' });

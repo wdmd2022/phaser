@@ -3,7 +3,7 @@ class SceneMain extends Phaser.Scene {
         super('SceneMain');
     }
     preload() {
-        this.load.image('background', './assets/Images/back-ground.png');
+        this.load.image('background', '/assets/Images/back-ground.png');
         this.load.audio('backgroundMusic', '/assets/Sound_Effects/Adventure-320bit.mp3')
       }
       

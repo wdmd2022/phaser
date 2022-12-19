@@ -19,8 +19,17 @@ class SceneMain extends Phaser.Scene {
         enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
         backgroundmusic = this.sound.add('backgroundMusic');
         backgroundmusic.play();
-        bubbleToGet = this.physics.add.sprite(200, 150, 'bubble');
-        bubbleToGet.setCollideWorldBounds(true);
+        bubble = this.physics.add.sprite(200, 150, 'bubble');
+        bubble.setCollideWorldBounds(true);
+
+        this.anims.create({
+            key: 'cycle',
+            frames: this.anims.generateFrameNumbers('bubble', { start: 0, end: 9 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        bubble.anims.play('cycle', true);
       }
       
     update() {
@@ -29,39 +38,39 @@ class SceneMain extends Phaser.Scene {
             return;
         }
     
-        if(bubbleToGet.x >= 750){
-            bubbleToGet.x = 749;
-            bubbleToGetXSpeed = bubbleToGetXSpeed * (-1);
-            bubbleToGet.setVelocityX(bubbleToGetXSpeed);
+        if(bubble.x >= 750){
+            bubble.x = 749;
+            bubbleXSpeed = bubbleXSpeed * (-1);
+            bubble.setVelocityX(bubbleXSpeed);
         } else {
-            bubbleToGet.x = bubbleToGet.x + bubbleToGetXSpeed;
+            bubble.x = bubble.x + bubbleXSpeed;
         }
     
     
-        if(bubbleToGet.x <= 50){
-            bubbleToGet.x = 51;
-            bubbleToGetXSpeed = bubbleToGetXSpeed * (-1);
-            bubbleToGet.setVelocityX(bubbleToGetXSpeed);
+        if(bubble.x <= 50){
+            bubble.x = 51;
+            bubbleXSpeed = bubbleXSpeed * (-1);
+            bubble.setVelocityX(bubbleXSpeed);
         } else {
-            bubbleToGet.x = bubbleToGet.x + bubbleToGetXSpeed;
+            bubble.x = bubble.x + bubbleXSpeed;
         }
     
     
-        if(bubbleToGet.y >= 550){
-            bubbleToGet.y = 549;
-            bubbleToGetYSpeed = bubbleToGetYSpeed * (-1);
-            bubbleToGet.setVelocityY(bubbleToGetYSpeed);
+        if(bubble.y >= 550){
+            bubble.y = 549;
+            bubbleYSpeed = bubbleYSpeed * (-1);
+            bubble.setVelocityY(bubbleYSpeed);
         } else {
-            bubbleToGet.y = bubbleToGet.y + bubbleToGetYSpeed;
+            bubble.y = bubble.y + bubbleYSpeed;
         }
     
     
-        if(bubbleToGet.y <= 50){
-            bubbleToGet.y = 51;
-            bubbleToGetYSpeed = bubbleToGetYSpeed * (-1);
-            bubbleToGet.setVelocityY(bubbleToGetYSpeed);
+        if(bubble.y <= 50){
+            bubble.y = 51;
+            bubbleYSpeed = bubbleYSpeed * (-1);
+            bubble.setVelocityY(bubbleYSpeed);
         } else {
-            bubbleToGet.y = bubbleToGet.y + bubbleToGetYSpeed;
+            bubble.y = bubble.y + bubbleYSpeed;
         }
     }
 }

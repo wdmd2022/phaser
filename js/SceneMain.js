@@ -15,11 +15,11 @@ class SceneMain extends Phaser.Scene {
         // backgroundMusic = game.sound.play('backgroundMusic');
         scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
         timerText = this.add.text(200, 16, 'timer: 0', { fontsize: '32px', fill: '#000' });
-        cursors = this.input.keyboard.createCursorKeys();
-        enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
+        // cursors = this.input.keyboard.createCursorKeys();
+        // enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
         backgroundmusic = this.sound.add('backgroundMusic');
         backgroundmusic.play();
-        var bubble;
+        // var bubble;
         bubble = this.physics.add.sprite(200, 150, 'bubble');
         bubble.setCollideWorldBounds(true);
 

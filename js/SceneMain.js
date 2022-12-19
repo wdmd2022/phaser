@@ -6,9 +6,16 @@ class SceneMain extends Phaser.Scene {
     preload() {
         this.load.image('background', '/assets/Images/back-ground.png');
         this.load.audio('backgroundMusic', '/assets/Sound_Effects/Adventure-320bit.mp3');
-        this.load.spritesheet('bubble', '/assets/Images/bub.png', { frameWidth: 100, frameHeight: 100 })
-      }
-      
+        this.load.spritesheet({
+            key: 'bubby',
+            url: 'assets/Images/bub.png',
+            frameConfig: {
+                frameWidth: 100,
+                frameHeight: 100,
+                startFrame: 0,
+                endFrame: 9
+                }});
+        }
       
     create() {
         this.add.image(400, 300, 'background');
@@ -20,6 +27,7 @@ class SceneMain extends Phaser.Scene {
         backgroundmusic = this.sound.add('backgroundMusic');
         backgroundmusic.play();
         // var bubble;
+        this.add.image(50, 100, 'bubby', 0);
         bubble = this.physics.add.sprite(200, 150, 'bubble');
         bubble.setCollideWorldBounds(true);
 

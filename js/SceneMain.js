@@ -25,7 +25,8 @@ class SceneMain extends Phaser.Scene {
             key: 'growing',
             frames: 'bubbypop',
             frameRate: 5,
-            repeat: -1
+            repeat: -1,
+            repeatDelay: { randInt: [ 1000, 3000 ] }
         };
         this.anims.create(config1);
         this.add.sprite(200, 300, 'boom').play('growing');

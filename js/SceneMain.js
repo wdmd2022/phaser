@@ -36,7 +36,7 @@ class SceneMain extends Phaser.Scene {
             y: { randInt: [ 100, 500 ] },
             scale: { randFloat: [ 0.25, 2.5 ]},
             anims: 'growing'
-        }
+        };
         for (var i = 0; i < 20; i++) {
             this.add.sprite(manyconfig);
         }

@@ -43,6 +43,9 @@ class SceneMain extends Phaser.Scene {
             this.many.setInteractive();
             this.input.on('gameobjectdown', this.onClicked.bind(this));
         }
+        function onClicked(pointer, objectClicked) {
+            objectClicked.destroy();
+        }
         // backgroundMusic = game.sound.play('backgroundMusic');
         // scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
         // timerText = this.add.text(200, 16, 'timer: 0', { fontsize: '32px', fill: '#000' });
@@ -54,9 +57,6 @@ class SceneMain extends Phaser.Scene {
         // this.add.image(50, 100, 'bubby', 0);
         // bubble = this.physics.add.sprite(200, 150, 'bubble');
         // bubble.setCollideWorldBounds(true);
-    }
-    onClicked(pointer, objectClicked) {
-        objectClicked.destroy();
     }
     
     update() {

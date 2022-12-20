@@ -34,11 +34,11 @@ class SceneMain extends Phaser.Scene {
             key: 'many',
             x: { randInt: [ 100, 400 ] },
             y: { randInt: [ 100, 500 ] },
-            scale: { randFloat: [ 0.5, 1.5 ]},
+            scale: { randFloat: [ 0.5, 1.5 ] },
             anims: 'growing'
         };
         for (var i = 0; i < 8; i++) {
-            this.add.sprite(manyconfig);
+            this.make.sprite(manyconfig);
         };
         // backgroundMusic = game.sound.play('backgroundMusic');
         // scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });

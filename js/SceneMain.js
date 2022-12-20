@@ -38,15 +38,16 @@ class SceneMain extends Phaser.Scene {
             scale: { randFloat: [ 0.25, 2.5 ] },
             anims: 'growing'
         };
+        var bubbo;
         for (var i = 0; i < 20; i++) {
-            this.make.sprite(manyconfig).setInteractive();
+            bubbo = this.make.sprite(manyconfig).setInteractive();
         }
         // backgroundMusic = game.sound.play('backgroundMusic');
         // scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
         // timerText = this.add.text(200, 16, 'timer: 0', { fontsize: '32px', fill: '#000' });
         // cursors = this.input.keyboard.createCursorKeys();
         // enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
-        sprite.on('pointerdown', function (pointer) {
+        bubbo.on('pointerdown', function (pointer) {
             this.destroy();
         });
         backgroundmusic = this.sound.add('backgroundMusic');

@@ -4,8 +4,8 @@ class SceneMain extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('background', './assets/Images/back-ground.png');
-        this.load.audio('backgroundMusic', '/assets/Sound_Effects/Adventure-320bit.mp3');
+        this.load.image('background', 'assets/Images/back-ground.png');
+        this.load.audio('backgroundMusic', 'assets/Sound_Effects/Adventure-320bit.mp3');
         // this.load.spritesheet({
         //     key: 'bubby',
         //     url: 'assets/Images/bub.png',

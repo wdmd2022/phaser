@@ -40,8 +40,6 @@ class SceneMain extends Phaser.Scene {
         };
         for (var i = 0; i < 20; i++) {
             this.make.sprite(manyconfig);
-            this.setInteractive();
-            this.on('clicked', this.clickHandler, this);
         }
         // backgroundMusic = game.sound.play('backgroundMusic');
         // scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
@@ -57,10 +55,6 @@ class SceneMain extends Phaser.Scene {
     }
     
     update() {
-        clickHandler ()
-        {
-            this.destroy();
-        }
         // if(gameover){
         //     return;
         // }

@@ -20,7 +20,7 @@ class SceneMain extends Phaser.Scene {
       
     create() {
         this.add.image(400, 300, 'background');
-        this.add.text(50, 400, 'Quick, pop em as fast as you can!', {color: '#00ff00'}).setOrigin(0.5, 0);
+        this.add.text(100, 50, 'Quick, pop em as fast as you can!', {color: '#00ff00'}).setOrigin(0.5, 0);
         const config1 = {
             key: 'growing',
             frames: 'bubbypop',

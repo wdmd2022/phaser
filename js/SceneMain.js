@@ -39,12 +39,9 @@ class SceneMain extends Phaser.Scene {
             anims: 'growing'
         };
         for (var i = 0; i < 20; i++) {
-            this.make.sprite(manyconfig);
-            this.many.setInteractive();
-            this.input.on('gameobjectdown', this.onClicked.bind(this));
-        }
-        function onClicked(pointer, objectClicked) {
-            objectClicked.destroy();
+            bubbo = this.make.sprite(manyconfig);
+            bubbo.setInteractive();
+            bubbo.on('clicked', this.clickHandler, this);
         }
         // backgroundMusic = game.sound.play('backgroundMusic');
         // scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
@@ -60,6 +57,10 @@ class SceneMain extends Phaser.Scene {
     }
     
     update() {
+        clickHandler (bubbo)
+        {
+            bubbo.destroy();
+        }
         // if(gameover){
         //     return;
         // }

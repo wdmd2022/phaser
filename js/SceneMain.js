@@ -29,6 +29,17 @@ class SceneMain extends Phaser.Scene {
         };
         this.anims.create(config1);
         this.add.sprite(200, 300, 'boom').play('growing');
+
+        const manyconfig = {
+            key: 'many',
+            x: { randInt: [ 100, 400 ] },
+            y: { randInt: [ 100, 500 ] },
+            scale: { randFloat: [ 0.5, 1.5 ]},
+            anims: 'growing'
+        }
+        for (var i = 0; i < 8; i++) {
+            this.make.sprite(manyconfig);
+        }
         // backgroundMusic = game.sound.play('backgroundMusic');
         // scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
         // timerText = this.add.text(200, 16, 'timer: 0', { fontsize: '32px', fill: '#000' });

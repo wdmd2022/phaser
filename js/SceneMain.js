@@ -25,7 +25,7 @@ class SceneMain extends Phaser.Scene {
             key: 'growing',
             frames: 'bubbypop',
             frameRate: 5,
-            repeat: 0
+            repeat: -1
         };
         this.anims.create(config1);
         this.add.sprite(200, 300, 'boom').play('growing');
@@ -36,7 +36,7 @@ class SceneMain extends Phaser.Scene {
             y: { randInt: [ 100, 500 ] },
             scale: { randFloat: [ 0.5, 1.5 ]},
             anims: 'growing'
-        }
+        };
         for (var i = 0; i < 8; i++) {
             this.add.sprite(manyconfig);
         }

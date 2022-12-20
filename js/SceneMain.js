@@ -37,7 +37,7 @@ class SceneMain extends Phaser.Scene {
             scale: { randFloat: [ 0.25, 2.5 ]},
             anims: 'growing'
         }
-        for (var i = 0; i < 90; i++) {
+        for (var i = 0; i < 20; i++) {
             this.add.sprite(manyconfig);
         }
         // backgroundMusic = game.sound.play('backgroundMusic');

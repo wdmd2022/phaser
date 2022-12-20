@@ -46,7 +46,7 @@ class SceneMain extends Phaser.Scene {
         // timerText = this.add.text(200, 16, 'timer: 0', { fontsize: '32px', fill: '#000' });
         // cursors = this.input.keyboard.createCursorKeys();
         // enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
-        many.on('pointerdown', function (pointer) {
+        sprite.on('pointerdown', function (pointer) {
             this.destroy();
         });
         backgroundmusic = this.sound.add('backgroundMusic');

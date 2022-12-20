@@ -39,7 +39,7 @@ class SceneMain extends Phaser.Scene {
         };
         for (var i = 0; i < 8; i++) {
             this.add.sprite(manyconfig);
-        }
+        };
         // backgroundMusic = game.sound.play('backgroundMusic');
         // scoreText = this.add.text(16, 16, 'score: 0', { fontsize: '32px', fill: '#000' });
         // timerText = this.add.text(200, 16, 'timer: 0', { fontsize: '32px', fill: '#000' });
